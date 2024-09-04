@@ -1,5 +1,5 @@
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Text, View} from 'react-native';
 
 export const CartScreen = () => {
   return (
@@ -8,3 +8,6 @@ export const CartScreen = () => {
     </View>
   );
 };
+
+
+const styles = StyleSheet.create({});

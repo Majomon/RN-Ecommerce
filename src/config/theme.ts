@@ -20,7 +20,7 @@ export const COLORS = {
 
 export const SIZES = {
   xSmall: 10,
-  smasll: 12,
+  small: 12,
   medium: 16,
   large: 20,
   xLarge: 24,
