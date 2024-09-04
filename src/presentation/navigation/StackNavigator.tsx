@@ -1,17 +1,13 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomeScreen} from '../screens/home/HomeScreen';
+import {BottomTabNavigator} from './BottomTabNavigator';
 
-export type RootStackParams = {
-  HomeScreen: undefined;
-  ProductScreen: {product: string};
-};
-
-const Stack = createStackNavigator<RootStackParams>();
+const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
     </Stack.Navigator>
   );
 };
