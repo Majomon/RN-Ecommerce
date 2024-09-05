@@ -1,15 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {COLORS, SIZES} from '../../../../config/theme';
+import {COLORS, SIZES} from '../../../config/theme';
 
-export const styleWelcome = StyleSheet.create({
-  container: {
-    width: '100%',
-  },
-  welcomeTxt: {
-    fontWeight: 'bold',
-    fontSize: SIZES.xxLarge - 5,
-    marginHorizontal: 12,
-  },
+export const styleSearch = StyleSheet.create({
   searchContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -20,7 +12,7 @@ export const styleWelcome = StyleSheet.create({
     height: 50,
     marginHorizontal: SIZES.small,
   },
-  searchIcon: {
+  cameraIcon: {
     marginHorizontal: 10,
     color: COLORS.gray,
   },

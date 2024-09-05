@@ -8,7 +8,7 @@ import {COLORS} from '../../config/theme';
 export type RootStackParams = {
   HomeScreen: undefined;
   SearchScreen: undefined;
-  Profile: undefined;
+  ProfileScreen: undefined;
 };
 
 const Tab = createBottomTabNavigator<RootStackParams>();
@@ -61,7 +61,7 @@ export const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="ProfileScreen"
         component={ProfileScreen}
         options={{
           tabBarIcon: ({focused}) => {
