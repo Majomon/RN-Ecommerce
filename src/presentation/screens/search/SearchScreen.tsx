@@ -1,12 +1,12 @@
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import {Pressable, Text, View} from 'react-native';
-import {styleSearch} from './Search.style';
-import {MyIcon} from '../../components/ui/MyIcon';
-import {COLORS, SIZES} from '../../../config/theme';
-import {RootStackParams} from '../../navigation/BottomTabNavigator';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {useNavigation} from '@react-navigation/native';
-import {TextInput} from 'react-native-gesture-handler';
+import { Pressable, View } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
+import { COLORS, SIZES } from '../../../config/theme';
+import { MyIcon } from '../../components/ui/MyIcon';
+import { RootStackParams } from '../../navigation/BottomTabNavigator';
+import { styleSearch } from './Search.style';
 
 export const SearchScreen = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
