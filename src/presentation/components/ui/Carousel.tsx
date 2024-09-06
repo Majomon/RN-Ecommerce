@@ -16,7 +16,7 @@ export const CarouselComponent = () => {
         loop
         autoPlay
         defaultIndex={1}
-        width={width * 0.9}
+        width={width}
         height={width / 2}
         pagingEnabled
         snapEnabled
@@ -35,7 +35,7 @@ export const CarouselComponent = () => {
             }}>
             <Image
               source={{uri: item}}
-              width={width * 0.85}
+              width={width * 0.9}
               height={width / 2}
               style={{borderRadius: 15, paddingTop: 15}}
             />

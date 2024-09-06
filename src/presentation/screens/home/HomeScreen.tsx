@@ -3,8 +3,9 @@ import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import {stylesHome} from './Home.style';
 import {MyIcon} from '../../components/ui/MyIcon';
 import {Welcome} from '../../components';
-import { CarouselComponent } from '../../components/ui/Carousel';
-import { HeadingsHome } from '../../components/home/heading/HeadingsHome';
+import {CarouselComponent} from '../../components/ui/Carousel';
+import {HeadingsHome} from '../../components/home/heading/HeadingsHome';
+import {ProductsRow} from '../../components/products/productsRow/ProductsRow';
 
 export const HomeScreen = () => {
   return (
@@ -26,7 +27,8 @@ export const HomeScreen = () => {
       <ScrollView>
         <Welcome />
         <CarouselComponent />
-        <HeadingsHome/>
+        <HeadingsHome />
+        <ProductsRow />
       </ScrollView>
     </View>
   );
