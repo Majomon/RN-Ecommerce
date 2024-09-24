@@ -26,6 +26,20 @@ export const stylesDetail = StyleSheet.create({
     borderTopLeftRadius: SIZES.medium,
     borderTopRightRadius: SIZES.medium,
   },
+  cartRow: {
+    paddingBottom: SIZES.small,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: SIZES.width,
+  },
+  cartBtn: {
+    width: SIZES.width * 0.7,
+    backgroundColor: COLORS.black,
+    padding: SIZES.small/2,
+    borderRadius: SIZES.large,
+    marginLeft: 12,
+  },
   titleRow: {
     marginHorizontal: 20,
     paddingBottom: SIZES.small,
@@ -35,19 +49,49 @@ export const stylesDetail = StyleSheet.create({
     width: SIZES.width - 44,
     top: 20,
   },
+  descriptionWrapper: {
+    marginTop: SIZES.large * 2,
+    marginHorizontal: SIZES.large,
+  },
+  description: {
+    fontWeight: 'medium',
+    fontSize: SIZES.large - 2,
+    color: COLORS.black,
+  },
+  descText: {
+    fontWeight: 'regular',
+    fontSize: SIZES.small,
+    textAlign: 'justify',
+    marginBottom: SIZES.small,
+  },
   title: {
     fontWeight: 'bold',
     fontSize: SIZES.large,
     color: COLORS.black,
   },
-  priceWrapper: {
-    backgroundColor: COLORS.secondary,
-    borderRadius: SIZES.large,
+  cartTitle: {
+    marginLeft:SIZES.small,
+    fontWeight: 'semibold',
+    fontSize: SIZES.medium,
+    color: COLORS.lightWhite,
   },
   price: {
     fontWeight: 'semibold',
     fontSize: SIZES.large,
     padding: 6,
+  },
+  priceWrapper: {
+    backgroundColor: COLORS.secondary,
+    borderRadius: SIZES.large,
+  },
+  addToCart: {
+    width: 37,
+    height: 37,
+    borderRadius: 50,
+    margin: SIZES.small,
+    backgroundColor: COLORS.black,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   ratingRow: {
     paddingBottom: SIZES.small,
@@ -67,5 +111,16 @@ export const stylesDetail = StyleSheet.create({
   ratingText: {
     color: COLORS.gray,
     fontWeight: 'medium',
+    fontSize: 16,
+    paddingHorizontal: SIZES.xSmall,
+  },
+  location: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: COLORS.secondary,
+    padding: 5,
+    marginHorizontal: 12,
+    borderRadius: SIZES.large,
   },
 });
