@@ -5,13 +5,13 @@ import {ProfileScreen} from '../screens/profile/ProfileScreen';
 import {MyIcon} from '../components/ui/MyIcon';
 import {COLORS} from '../../config/theme';
 
-export type RootStackParams = {
+export type RootBottomTabParams = {
   HomeScreen: undefined;
   SearchScreen: undefined;
   ProfileScreen: undefined;
 };
 
-const Tab = createBottomTabNavigator<RootStackParams>();
+const Tab = createBottomTabNavigator<RootBottomTabParams>();
 
 export const BottomTabNavigator = () => {
   return (
@@ -27,7 +27,7 @@ export const BottomTabNavigator = () => {
           right: 0,
           left: 0,
           elevation: 0,
-          height: 70,
+          // height: 50,
         },
       }}>
       <Tab.Screen

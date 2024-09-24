@@ -1,16 +1,16 @@
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import {Pressable, Text, View} from 'react-native';
-import {styleWelcome} from './Welcome.styles';
-import {COLORS, SIZES} from '../../../../config/theme';
-import {MyIcon} from '../../ui/MyIcon';
-import {TextInput} from 'react-native-gesture-handler';
-import {RootStackParams} from '../../../navigation/BottomTabNavigator';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {useNavigation} from '@react-navigation/native';
+import { Pressable, Text, View } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
+import { COLORS, SIZES } from '../../../../config/theme';
+import { RootBottomTabParams } from '../../../navigation/BottomTabNavigator';
+import { MyIcon } from '../../ui/MyIcon';
+import { styleWelcome } from './Welcome.styles';
 
 export const Welcome = () => {
   /*   const navigation = useNavigation<StackNavigationProp<RootStackParams>>(); */
-  const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
+  const navigation = useNavigation<StackNavigationProp<RootBottomTabParams>>();
 
   return (
     <View>
