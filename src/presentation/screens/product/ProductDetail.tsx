@@ -8,7 +8,8 @@ import {COLORS, SIZES} from '../../../config/theme';
 
 interface Props extends StackScreenProps<RootStackParams, 'DetailsScreen'> {}
 
-export const ProductDetailScreen = ({navigation}: Props) => {
+export const ProductDetailScreen = ({navigation, route}: Props) => {
+  const {item} = route.params;
   const [count, setCount] = useState(1);
 
   const increment = () => {
@@ -33,15 +34,15 @@ export const ProductDetailScreen = ({navigation}: Props) => {
       </View>
       <Image
         source={{
-          uri: 'https://beca.pe/wp-content/uploads/2023/12/d195186plex-1080x675.webp',
+          uri: item.imageUrl,
         }}
         style={stylesDetail.image}
       />
       <View style={stylesDetail.details}>
         <View style={stylesDetail.titleRow}>
-          <Text style={stylesDetail.title}>Product</Text>
+          <Text style={stylesDetail.title}>{item.title}</Text>
           <View style={stylesDetail.priceWrapper}>
-            <Text style={stylesDetail.price}>$620.4</Text>
+            <Text style={stylesDetail.price}>{item.price}</Text>
           </View>
         </View>
         <View style={stylesDetail.ratingRow}>
@@ -63,18 +64,13 @@ export const ProductDetailScreen = ({navigation}: Props) => {
         </View>
         <View style={stylesDetail.descriptionWrapper}>
           <Text style={stylesDetail.description}>Description</Text>
-          <Text style={stylesDetail.descText}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
-            unde quis eligendi ad, voluptatibus quasi provident exercitationem
-            adipisci maiores a deleniti aliquam fugit debitis sequi culpa
-            voluptates cumque beatae hic?
-          </Text>
+          <Text style={stylesDetail.descText}>{item.description}</Text>
         </View>
         <View style={{marginBottom: SIZES.small}}>
           <View style={stylesDetail.location}>
             <View style={{flexDirection: 'row'}}>
               <MyIcon name="locate-outline" size={20} />
-              <Text> Dallas</Text>
+              <Text> {item.product_location}</Text>
             </View>
             <View style={{flexDirection: 'row'}}>
               <MyIcon name="car-outline" size={20} />
@@ -87,7 +83,7 @@ export const ProductDetailScreen = ({navigation}: Props) => {
             <Text style={stylesDetail.cartTitle}>BUY NOW </Text>
           </Pressable>
           <Pressable onPress={() => {}} style={stylesDetail.addToCart}>
-            <MyIcon name='bag' color={COLORS.lightWhite} size={22}/>
+            <MyIcon name="bag" color={COLORS.lightWhite} size={22} />
           </Pressable>
         </View>
       </View>

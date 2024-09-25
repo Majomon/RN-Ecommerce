@@ -6,8 +6,13 @@ import {COLORS} from '../../../../config/theme';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParams} from '../../../navigation/StackNavigator';
+import {Item} from '../../../../interfaces/item.interface';
 
-export const ProductCardView = () => {
+interface Props {
+  item: Item;
+}
+
+export const ProductCardView = ({item}: Props) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
 
   const slides = [
@@ -17,30 +22,28 @@ export const ProductCardView = () => {
   ];
 
   return (
-    <Pressable onPress={() => {}}>
+    <Pressable onPress={() => navigation.navigate('DetailsScreen', {item})}>
       <View style={styleProductCard.container}>
         <View style={styleProductCard.imageContainer}>
           <Image
             source={{
-              uri: 'https://beca.pe/wp-content/uploads/2023/12/d195186plex-1080x675.webp',
+              uri: item.imageUrl,
             }}
             style={styleProductCard.image}
           />
         </View>
         <View style={styleProductCard.details}>
           <Text style={styleProductCard.title} numberOfLines={1}>
-            Product
+            {item.title}
           </Text>
           <Text style={styleProductCard.supplier} numberOfLines={1}>
-            Product
+            {item.supplier}
           </Text>
           <Text style={styleProductCard.price} numberOfLines={1}>
-            $123
+            {item.price}
           </Text>
         </View>
-        <Pressable
-          style={styleProductCard.addBtn}
-          onPress={() => navigation.navigate('DetailsScreen')}>
+        <Pressable style={styleProductCard.addBtn}>
           <MyIcon name="add-circle" size={35} color={COLORS.primary} />
         </Pressable>
       </View>

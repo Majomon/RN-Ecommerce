@@ -9,10 +9,11 @@ export const useFetch = () => {
   const fetchData = async () => {
     isSetLoading(true);
     try {
-      const response = await axios.get('http://localhost:3000/api/products');
+      const response = await axios.get('http://192.168.0.6:3000/api/products');
       setData(response.data);
       isSetLoading(false);
     } catch (error) {
+      console.log(error);
       if (axios.isAxiosError(error)) {
         setError(error.message);
       } else {
