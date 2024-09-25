@@ -4,6 +4,7 @@ import {COLORS, SIZES} from '../../../config/theme';
 export const stylesDetail = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: COLORS.lightWhite,
   },
   upperRow: {
     marginHorizontal: 20,
@@ -36,7 +37,7 @@ export const stylesDetail = StyleSheet.create({
   cartBtn: {
     width: SIZES.width * 0.7,
     backgroundColor: COLORS.black,
-    padding: SIZES.small/2,
+    padding: SIZES.small / 2,
     borderRadius: SIZES.large,
     marginLeft: 12,
   },
@@ -70,15 +71,16 @@ export const stylesDetail = StyleSheet.create({
     color: COLORS.black,
   },
   cartTitle: {
-    marginLeft:SIZES.small,
+    marginLeft: SIZES.small,
     fontWeight: 'semibold',
     fontSize: SIZES.medium,
     color: COLORS.lightWhite,
   },
   price: {
-    fontWeight: 'semibold',
+    fontWeight: 'bold',
     fontSize: SIZES.large,
     padding: 6,
+    color: COLORS.black,
   },
   priceWrapper: {
     backgroundColor: COLORS.secondary,

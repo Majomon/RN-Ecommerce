@@ -1,17 +1,14 @@
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import axios from 'axios';
 import React, {useState} from 'react';
-import {FlatList, Image, Pressable, Text, View} from 'react-native';
+import {FlatList, Image, Pressable, View} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import {COLORS, SIZES} from '../../../config/theme';
-import {MyIcon} from '../../components/ui/MyIcon';
-import {RootBottomTabParams} from '../../navigation/BottomTabNavigator';
-import {styleSearch} from './Search.style';
-import axios from 'axios';
 import {Item} from '../../../interfaces/item.interface';
+import {SearchTitle} from '../../components/products/searchTitle/SearchTitle';
+import {MyIcon} from '../../components/ui/MyIcon';
+import {styleSearch} from './Search.style';
 
 export const SearchScreen = () => {
-  const navigation = useNavigation<StackNavigationProp<RootBottomTabParams>>();
   const [searchKey, setSearchKey] = useState<string>('');
   const [searchResults, setSearchResults] = useState<Item[]>([]);
 
@@ -65,7 +62,8 @@ export const SearchScreen = () => {
         <FlatList
           data={searchResults}
           keyExtractor={item => item._id}
-          renderItem={({item}) => <Text>{item.title}</Text>}
+          renderItem={({item}) => <SearchTitle item={item} />}
+          style={{marginHorizontal: 12}}
         />
       )}
     </View>
