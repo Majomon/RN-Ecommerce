@@ -3,7 +3,7 @@ import {COLORS, SIZES} from '../../../../config/theme';
 
 export const styleProductCard = StyleSheet.create({
   container: {
-    width: 182,
+    width: 160,
     height: 220,
     marginEnd: 22,
     borderRadius: SIZES.medium,
@@ -11,7 +11,7 @@ export const styleProductCard = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    width: 170,
+    width: 150,
     marginLeft: SIZES.small / 2,
     marginTop: SIZES.small / 2,
     borderRadius: SIZES.small,

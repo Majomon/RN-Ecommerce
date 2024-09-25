@@ -35,4 +35,10 @@ export const styleSearch = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.primary,
   },
+  searchImage: {
+    resizeMode: 'contain',
+    width:400,
+    height:600,
+    opacity:0.9
+  },
 });

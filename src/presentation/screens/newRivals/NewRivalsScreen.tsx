@@ -6,6 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParams} from '../../navigation/StackNavigator';
 import {COLORS} from '../../../config/theme';
+import { ProductList } from '../../components/rivals/ProductList';
 
 export const NewRivalsScreen = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
@@ -23,6 +24,7 @@ export const NewRivalsScreen = () => {
           </Pressable>
           <Text style={stylesNewRivals.heading}> Products</Text>
         </View>
+        <ProductList/>
       </View>
     </View>
   );
