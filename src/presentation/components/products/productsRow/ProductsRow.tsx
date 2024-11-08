@@ -8,7 +8,6 @@ import {styleProductsRow} from './ProductsRow.style';
 export const ProductsRow = () => {
   const {data, isLoading, error} = useFetch();
   
-  const products = [1, 2, 3, 4];
   return (
     <View style={styleProductsRow.container}>
       {isLoading ? (

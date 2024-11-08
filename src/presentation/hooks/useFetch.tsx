@@ -1,8 +1,9 @@
 import axios from 'axios';
 import {useEffect, useState} from 'react';
+import {Item} from '../../interfaces/item.interface';
 
 export const useFetch = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Item[]>([]);
   const [isLoading, isSetLoading] = useState(false);
   const [error, setError] = useState<null | string>(null);
 
